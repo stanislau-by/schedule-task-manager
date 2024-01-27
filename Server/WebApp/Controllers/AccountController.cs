@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WebApp.Models.Account;
 
 namespace WebApp.Controllers
 {
@@ -8,25 +9,25 @@ namespace WebApp.Controllers
     public class AccountController : ControllerBase
     {
         [HttpPost]
-        public Task<string> Authorization()
+        public IActionResult Login(LoginModel model)
         {
             throw new NotImplementedException();
         }
 
         [HttpPost]
-        public Task Registration()
+        public IActionResult Registration(RegistrationModel model)
         {
             throw new NotImplementedException();
         }
 
         [HttpPost]
-        public Task ResetPassword()
+        public IActionResult RestorePassword(RestorePasswordModel mode)
         {
             throw new NotImplementedException();
         }
 
-        [HttpPost]
-        public Task RestorePassword()
+        [HttpPut("{token}")]
+        public IActionResult ResetPassword(string token, [FromBody] ResetPasswordModel model)
         {
             throw new NotImplementedException();
         }
