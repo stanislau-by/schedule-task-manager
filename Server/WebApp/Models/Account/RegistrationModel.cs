@@ -2,7 +2,7 @@
 {
     public class RegistrationModel
     {
-        public required string Email { get; set; }
-        public required string Name { get; set; }
+        public required string Email { get; init; }
+        public required string Name { get; init; }
     }
 }

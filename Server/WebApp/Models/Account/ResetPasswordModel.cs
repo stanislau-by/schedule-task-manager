@@ -2,6 +2,6 @@
 {
     public class ResetPasswordModel
     {
-        public required string Password { get; set; }
+        public required string Password { get; init; }
     }
 }
